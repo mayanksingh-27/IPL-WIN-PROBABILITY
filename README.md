@@ -1,17 +1,17 @@
 # IPL-WIN-PROBABILITY
-# 🏏 IPL First Innings Score Prediction (2008–2019)
+#  IPL First Innings Score Prediction (2008–2019)
 
 This project predicts the **final first-innings score** of an IPL match using partial match data (e.g., after 5–15 overs). The model was trained on IPL seasons from **2008–2016** and tested on data from **2017–2019**.
 
 ---
 
-## 📌 Objective
+##  Objective
 
 To build a machine learning model that can predict the **final first-innings total score** based on the state of the match at any point during the innings.
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 - Source: `ipl.csv` (ball-by-ball IPL match data)
 - Total records: `76,014` deliveries
@@ -22,7 +22,7 @@ To build a machine learning model that can predict the **final first-innings tot
 
 ---
 
-## ⚙️ Preprocessing Steps
+##  Preprocessing Steps
 
 1. **Removed irrelevant columns** like `mid`, `venue`, `batsman`, etc.
 2. **Filtered** only consistent teams (removed Kochi, Pune Warriors, etc.)
@@ -33,7 +33,7 @@ To build a machine learning model that can predict the **final first-innings tot
 
 ---
 
-## 🧠 ML Models Used
+##  ML Models Used
 
 | Model               | MAE    | RMSE   |
 |--------------------|--------|--------|
@@ -51,4 +51,5 @@ To build a machine learning model that can predict the **final first-innings tot
 - **RMSE ~ 15.8 runs**: On average, the prediction is off by ~15 runs.
 - **Accuracy Estimation:**  
   Assuming max score = 220, an average ±15 run error means:
+  Accuracy ≈ (1 - RMSE / MaxTotal) * 100 ≈ (1 - 15.8 / 220) * 100 ≈ 92.82%
 
